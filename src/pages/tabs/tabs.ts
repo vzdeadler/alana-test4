@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { AboutPage } from '../about/about';
-import { HomePage } from '../home/home';
+import { DashboardPage } from '../dashboard/dashboard';
 import { Slides, Tabs } from 'ionic-angular';
 
 @Component({
@@ -9,7 +9,7 @@ import { Slides, Tabs } from 'ionic-angular';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = DashboardPage;
   tab2Root = AboutPage;
 
   constructor() {

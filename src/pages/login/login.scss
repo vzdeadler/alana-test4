@@ -1,3 +1,50 @@
+$alana-color: #dd4a58;
+$text-input-placeholder-color: #fff;
 page-login {
 
+    ion-content {
+        text-align: center;
+        
+        img {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 60px;
+        }
+
+        .scroll-content {
+            background-color: $alana-color;
+
+            ion-item {
+                background-color: $alana-color;
+                color: #fff;
+                margin-bottom: 30px;
+
+                .item-inner {
+                    margin-left: 0px !important;
+                }
+
+                ion-input {
+                    input::placeholder {
+                        color: #fff !important;
+                    }
+                }
+
+                .icon-password {
+                    z-index: 10;
+                }
+            }
+
+            button {
+                background-color: $alana-color;
+                border-radius: 50px;
+                border: 3px solid #fff;
+                width: 90%;
+                margin-top: 90px;
+                height: 40px;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        }
+    }
 }

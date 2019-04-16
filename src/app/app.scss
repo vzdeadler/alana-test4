@@ -1,5 +1,15 @@
 // http://ionicframework.com/docs/theming/
 
+.tabbar {
+    margin-bottom: 5%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
 
 // App Global Sass
 // --------------------------------------------------
