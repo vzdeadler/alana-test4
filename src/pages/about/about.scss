@@ -1,3 +1,40 @@
+$alana-color: #dd4a58;
+
 page-about {
 
+  background-color: #f4f4f4;
+
+  .toolbar-title {
+      text-align: left;
+      color: $alana-color;
+  }
+
+  ion-header {
+    box-shadow: 0px 1px 2px #dedede;
+
+    ion-navbar {
+        .toolbar-background {
+            background-color: #fff;
+        }
+    }
+  }
+
+  ion-header, ion-content {
+    margin: 5%;
+    width: 90%;
+  }
+
+  ion-content {
+    border: 1px solid #dedede;
+    height: 90%;
+
+    .fixed-content {
+      margin-bottom: 0px !important;
+    }
+
+    .scroll-content {
+      margin-bottom: 0px !important;
+      background-color: #f4f4f4;
+    }
+  }
 }

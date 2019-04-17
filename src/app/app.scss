@@ -6,9 +6,26 @@
     width: 90%;
 }
 
+.top-44  .tab-nav{
+  height: 54px;
+  top:54px !important;
+}
+
 ::-webkit-scrollbar,
 *::-webkit-scrollbar {
   display: none;
+}
+
+.tabs-md .tab-button[aria-selected=true] {
+  border-top: 2px solid #dd4a58;
+
+  .tab-button-icon {
+    color: #dd4a58;
+  }
+}
+
+.tab-button {
+  background-color: #fff;
 }
 
 // App Global Sass

@@ -1,4 +1,4 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabIcon="information-circle"></ion-tab>
+  <ion-tab class="{{firstTab ? 'actived-tab' : ''}}" [root]="tab1Root" tabIcon="home" class="top-44" click="firstTab = true"></ion-tab>
+  <ion-tab class="{{firstTab ? '' : 'actived-tab'}}" [root]="tab2Root" tabIcon="information-circle" click="firstTab = false"></ion-tab>
 </ion-tabs>

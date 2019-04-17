@@ -26,9 +26,14 @@ page-dashboard {
 
     ion-content {
         border: 1px solid #dedede;
-        height: 95%;
+        height: 90%;
+
+        .fixed-content {
+          margin-bottom: 0px !important;
+        }
 
         .scroll-content {
+            margin-bottom: 0px !important;
             background-color: #f4f4f4;
 
             ion-card {
@@ -57,7 +62,7 @@ page-dashboard {
                                 padding-top: 20px;
                                 margin: 20px 0px;
                                 border-left: 1px solid lightgray;
-                                color: #d54;
+                                color: #dd4a58;
                             }
 
                             .shadow {
