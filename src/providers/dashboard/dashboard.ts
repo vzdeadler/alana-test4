@@ -23,7 +23,26 @@ export class DashboardProvider {
       { 
         headers: _headers,
         params: _params
-      });
+      }
+    );
   };
+
+  getVacant(data): any {
+    let _headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + data.jwt,
+      'company': '' + data.id
+    });
+    let _params = new HttpParams()
+      .set('offset', '0')
+      .set('limit', '10')
+      .set('apply', '0');
+    return this.http.get(
+      this.url + '/secure-candidate/publication/index', 
+      { 
+        headers: _headers,
+        params: _params
+      }
+    );
+  }
 
 }

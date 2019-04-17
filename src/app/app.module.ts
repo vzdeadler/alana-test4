@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginProvider } from '../providers/login/login';
 import { DashboardProvider } from '../providers/dashboard/dashboard';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileProvider } from '../providers/profile/profile';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    DashboardProvider
+    DashboardProvider,
+    ProfileProvider
   ]
 })
 export class AppModule {}

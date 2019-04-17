@@ -1,11 +1,48 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      My Profile
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div class="first-section" [style.backgroundImage]="'url(' + profileData.profilePicture + ')'">
+    <img src="{{profileData.profilePicture}}">
+    <h3>{{profileData.name}} {{profileData.lastName}}</h3>
+    <div class="opacity-pic"></div>
+  </div>
+  <div class="second-section">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title class="{{ profileData.hired ? 'red-color' : 'green-color' }}">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6>
+              HIRED 
+            </ion-col>
+            <ion-col col-6 class="country-text">
+              <img class="flag-image" src="../../assets/imgs/mexico_flag.png"> México
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </ion-card-title>
+      <p class="gender-text">
+        {{profileData.gender}}
+      </p>
+      <p>
+        {{profileData.birthDate}} a&ntilde;os
+      </p>
+      <p class="phone-text">
+        {{profileData.countryCode?.code}} {{profileData.phone}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+    <!-- <div>Location: <img class="flag-image" src="../../assets/imgs/mexico_flag.png"> {{profileData.address.location.name}}</div>
+     <div>Hired: <ion-icon  name="{{ profileData.hiredIcon }}"></ion-icon></div>
+    <div>Age: {{profileData.birthDate}}</div>
+    <div>Gender: {{profileData.gender}}</div>
+    <div>Phone: {{profileData.countryCode.code}} {{profileData.phone}}</div> -->
+  </div>
 </ion-content>

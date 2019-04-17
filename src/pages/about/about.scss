@@ -35,6 +35,115 @@ page-about {
     .scroll-content {
       margin-bottom: 0px !important;
       background-color: #f4f4f4;
+
+      .second-section {
+        font-size: 20px;
+        text-align: center;
+  
+        div {
+          margin-bottom: 15px;
+  
+          .flag-image {
+            width: 25px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .first-section {
+      background-color: $alana-color;
+      background-size: cover;
+      height: 35%;
+      position: relative;
+
+      img {
+        position: absolute;
+        z-index: 10;
+        width: 40%;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 30%;
+      }
+
+      h3 {
+        position: absolute;
+        z-index: 20;
+        color: white;
+        bottom: 0;
+        text-align: center;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .flag-image {
+      width: 25px;
+      vertical-align: middle;
+      margin-bottom: 5px;
+    }
+
+    .red-color, .green-color {
+      font-size: 30px;
+      vertical-align: middle;
+    }
+
+    .red-color {
+      color: darkred;
+    }
+
+    .green-color {
+      color: green;
+    }
+
+    .gender-text {
+      font-size: 17px;
+    }
+
+    .country-text {
+      font-size: 20px;
+      color: black;
+      font-weight: 400;
+      padding-top: 8px;
+      text-align: right;
+      img {
+        display: inline;
+      }
+    }
+
+    .phone-text {
+      font-size: 20px;
+    }
+
+    .second-section{
+      font-size: 20px;
+      text-align: center;
+      background-color: #fff;
+      height: 63%;
+
+      ion-grid, ion-grid ion-row ion-col {
+        padding: 0px;
+      }
+
+      div {
+        margin-bottom: 15px;
+
+        .flag-image {
+          width: 25px;
+          vertical-align: middle;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .opacity-pic {
+      background-color: $alana-color;
+      opacity: 0.6;
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
   }
 }

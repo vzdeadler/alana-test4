@@ -1,3 +1,4 @@
+import { ProfileProvider } from './../../providers/profile/profile';
 import { LoginProvider } from './../../providers/login/login';
 import { DashboardProvider } from './../../providers/dashboard/dashboard';
 import { Component } from '@angular/core';
@@ -11,13 +12,17 @@ export class DashboardPage {
 
   headerTitle: string;
   vacantsData: any;
+  vacantData: any;
+  showVacants: boolean;
 
   constructor(
     public navCtrl: NavController,
     public loginProvider: LoginProvider,
-    public dashboardProvider: DashboardProvider
+    public dashboardProvider: DashboardProvider,
+    public profileProvider: ProfileProvider
   ) {
     this.headerTitle = 'Dashboard';
+    this.showVacants = true;
   }
 
   ionViewDidLoad() {
@@ -27,12 +32,13 @@ export class DashboardPage {
         console.log(data.response);
         this.vacantsData = data.response;
         this.parseVacantData();
+        console.log('asd');
+        this.profileProvider.getCandidate(jwt);
       },
       (err) => {
         console.log(err);
-      })
-
-    
+      }
+    );
   }
 
   parseVacantData(): void {
@@ -44,14 +50,27 @@ export class DashboardPage {
     };
   };
 
+  openVacant(_id): void {
+    let data = {
+      id: _id,
+      jwt: this.loginProvider.getToken()
+    };
+    this.dashboardProvider.getVacant(data)
+      .subscribe(data => {
+        console.log(data);
+        this.vacantData = data.response;
+        this.showVacants = false;
+        this.headerTitle = 'Vacantes';
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  };
+
   backController(): void {
-    // if(this.slideStep > 1){
-    //   this.formSlider.lockSwipes(false);
-    //   this.formSlider.slidePrev(500);
-    //   this.formSlider.lockSwipes(true);
-    //   this.slideStep -= 1;
-    // }else{
-    //   this.navCtrl.pop();
-    // }
+    this.showVacants = true;
+    this.vacantData = undefined;
+    this.headerTitle = 'Dashboard';
   };
 }
